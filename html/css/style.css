@@ -5,12 +5,12 @@ body {
 .container {
     position: absolute;
     bottom: 1%;
-    left: 3.85%;
+    left: 0.85%;
     display: flex;
     justify-content: space-evenly;
     align-items: left;
     flex-direction: column;
-    width: 16%;
+    width: 15%;
     height: 4%;
 
     font-size: 1.6vh;

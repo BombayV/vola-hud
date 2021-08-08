@@ -8,7 +8,7 @@ RegisterNetEvent('ev:getServerInfo', function()
 	local player = vRP.getUserSource({playerID})
 
 	local info = {
-		name = GetPlayerName(source)
+		name = GetPlayerName(source),
 		money = vRP.getMoney({playerID}),
 		bankMoney = vRP.getBankMoney({playerID})
 	}

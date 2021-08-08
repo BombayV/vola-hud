@@ -11,7 +11,7 @@ window.addEventListener('message', (e) => {
     switch (e.data.action) {
         case 'updateInfo':
             hNum = e.data.health;
-            aNum = e.data.armour;
+            aNum = e.data.armor;
             if (hNum < valueBeforeDisappearing) {
                 $("#health-text").hide();
             } else {
@@ -21,12 +21,12 @@ window.addEventListener('message', (e) => {
             if (aNum < valueBeforeDisappearing) {
                 $("#armor-text").hide();
             } else {
-                $("#armor-text").text(e.data.armour + "%");
+                $("#armor-text").text(e.data.armor + "%");
                 $("#armor-text").show();
             }
             $("#time").text(e.data.time);
             $("#health").css("width", e.data.health + "%");
-            $("#armor").css("width", e.data.armour + "%");
+            $("#armor").css("width", e.data.armor + "%");
             break;
         case 'status':
             $("#name").text(e.data.name);
