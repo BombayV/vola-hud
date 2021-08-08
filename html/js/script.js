@@ -1,4 +1,4 @@
-const valueBeforeDisappearing = 70.0;
+const valueBeforeDisappearing = 1.0;
 
 const doc = document;
 const h = doc.getElementById('health');
