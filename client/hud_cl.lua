@@ -7,10 +7,18 @@ CreateThread(function()
         local ped = PlayerPedId()
         local armor = GetPedArmour(ped)
         local health = (GetEntityHealth(ped) - 100)
+        local minutes, hours = GetClockMinutes(), GetClockHours()
+        if (minutes <= 9) then
+			minutes = "0" .. minutes
+		end
+		if (hours <= 9) then
+			hours = "0" .. hours
+		end
         SendNUIMessage({
             action = "updateInfo",
             health = health,
-            armor = armor
+            armor = armor,
+            time = hours .. ":" .. minutes
         })
         Wait(350)
     end
