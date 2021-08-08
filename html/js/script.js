@@ -37,9 +37,24 @@ window.addEventListener('message', (e) => {
             $("#money").text(numberWithCommas(e.data.money));
             $("#bank").text(numberWithCommas(e.data.bank));
             break;
+        case 'updatePosition':
+            updateHudPosition(e.data.position)
+        break;
     }
 })
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function updateHudPosition(Minimap) {
+	let width = Minimap.width;
+	let x = Minimap.left_x;
+	let y = Minimap.bottom_y;
+
+	let xCalc = (x * $(window).width());
+	let widthCalc = width * $(window).width()+ 2;
+	let yCalc = (y * $(window).height()) - 25;
+
+	$('#container').css('left', xCalc + 'px').css('top', yCalc + 'px').css('width', widthCalc + 'px')
 }
