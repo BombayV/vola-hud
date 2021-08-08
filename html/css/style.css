@@ -5,13 +5,13 @@ body {
 .container {
     position: absolute;
     bottom: 1%;
-    left: 0.85%;
+    left: 2.5%;
     display: flex;
     justify-content: space-evenly;
     align-items: left;
     flex-direction: column;
-    width: 15%;
-    height: 4%;
+    width: 15vw;
+    height: 4.2vh;
 
     font-size: 1.6vh;
     font-family: Arial;
@@ -32,7 +32,7 @@ body {
 .info-container {
     position: absolute;
     bottom: 5.5%;
-    left: 16.25%;
+    left: 18%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
