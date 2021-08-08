@@ -30,16 +30,14 @@ end)
 
 CreateThread(function()
 	while true do 
-		if isPlayerLoaded then 
-			local resX, resY = GetActiveScreenResolution()
-			if screenRes.x == nil or screenRes.x ~= resX or screenRes.y == nil or screenRes.y ~= resY then 
-				MoveHudToCorrectPos()
-			end
-		end
-		Wait(10000)
+        local resX, resY = GetActiveScreenResolution()
+        if screenRes.x == nil or screenRes.x ~= resX or screenRes.y == nil or screenRes.y ~= resY then 
+            MoveHudToCorrectPos()
+            print('Updated position')
+        end
+		Wait(5000)
 	end
 end)
-
 
 function MoveHudToCorrectPos()
 	local safezone = GetSafeZoneSize()
