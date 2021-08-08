@@ -10,6 +10,10 @@ let aNum = 100.0;
 window.addEventListener('message', (e) => {
     switch (e.data.action) {
         case 'updateInfo':
+            let d = new Date();
+            let n = d.getHours();
+            let m = d.getMinutes();
+            let time = n + ":" + m
             hNum = e.data.health;
             aNum = e.data.armor;
             if (hNum < valueBeforeDisappearing) {
@@ -24,7 +28,7 @@ window.addEventListener('message', (e) => {
                 $("#armor-text").text(e.data.armor + "%");
                 $("#armor-text").show();
             }
-            $("#time").text(e.data.time);
+            $("#time").text(time);
             $("#health").css("width", e.data.health + "%");
             $("#armor").css("width", e.data.armor + "%");
             break;
