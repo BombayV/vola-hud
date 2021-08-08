@@ -37,7 +37,7 @@ window.addEventListener('message', (e) => {
             $("#money").text(numberWithCommas(e.data.money));
             $("#bank").text(numberWithCommas(e.data.bank));
             break;
-        case 'updatePosition':
+        case 'updateHudLocation':
             console.log('Received NUI position')
             updateHudPosition(e.data.position)
         break;
