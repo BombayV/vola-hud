@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hud created for Vola">
+    <title>Hud</title>
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body >
+    <div class="container">
+        <span id="health" style="background-color: #01ff4f;" class="d-cont">
+          <span id="health-text" style="position: absolute; width: 100%; text-align: center; z-index: 0;">100%</span>
+        </span>
+        <span id="armor" style="background-color: #0030ff;" class="d-cont">
+          <span id="armor-text" style="position: absolute; width: 100%; text-align: center; z-index: 0;">100%</span>
+        </span>
+    </div>
+    <div class="info-container">
+      <span style="margin-bottom: 2.5%; padding-top: 2.5%;" class="info-data">
+        <span id="name">Bombay</span>
+      </span>
+      <span style="border-bottom: 0.1vh solid white; width: 100%; margin-bottom: 2.5%;"></span>
+      <span class="info-data">
+        <img class="info-img" src="./img/money-bag.png">
+        <span id="money">$1</span>
+      </span>
+      <span class="info-data">
+        <img class="info-img" src="./img/credit-card.png">
+        <span id="bank">$1</span>
+      </span>
+    </div>
+
+    <!--Javascript files-->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>
