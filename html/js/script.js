@@ -38,7 +38,6 @@ window.addEventListener('message', (e) => {
             $("#bank").text(numberWithCommas(e.data.bank));
             break;
         case 'updateHudLocation':
-            console.log('Received NUI position')
             updateHudPosition(e.data.position)
         break;
     }
@@ -56,8 +55,5 @@ function updateHudPosition(Minimap) {
 	let xCalc = (x * $(window).width());
 	let widthCalc = width * $(window).width()+ 2;
 	let yCalc = (y * $(window).height()) - 25;
-    console.log('Updated Width: ' + widthCalc)
-    console.log('Updated Left: ' + xCalc)
-    console.log('Updated Top: ' + yCalc)
 	$('#container').css('left', xCalc + 'px').css('top', yCalc + 'px').css('width', widthCalc + 'px')
 }

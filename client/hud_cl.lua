@@ -34,9 +34,8 @@ CreateThread(function()
         if screenRes.x == nil or screenRes.x ~= resX or screenRes.y == nil or screenRes.y ~= resY then 
             SendNUIMessage({
                 action = "updateHudLocation",
-                health = GetMinimapAnchor()
+                position = GetMinimapAnchor()
             })
-            print('Updated position')
         end
 		Wait(5000)
 	end
