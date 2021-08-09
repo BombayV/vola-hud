@@ -51,9 +51,12 @@ function updateHudPosition(Minimap) {
 	let width = Minimap.width;
 	let x = Minimap.left_x;
 	let y = Minimap.bottom_y;
+    let right = 
+    console.log((Minimap.right_x * $(window).width()))
 
 	let xCalc = (x * $(window).width());
 	let widthCalc = width * $(window).width()+ 2;
 	let yCalc = (y * $(window).height()) - 25;
+    $('#info-container').css('left', (Minimap.right_x * $(window).width() + 12) + 'px')
 	$('#container').css('left', xCalc + 'px').css('top', yCalc + 'px').css('width', widthCalc + 'px')
 }
