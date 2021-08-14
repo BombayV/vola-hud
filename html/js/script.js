@@ -40,6 +40,16 @@ window.addEventListener('message', (e) => {
         case 'updateHudLocation':
             updateHudPosition(e.data.position)
         break;
+
+        case 'hide':
+            $('#info-container').fadeOut();
+            $('#container').fadeOut();
+        break;
+
+        case 'show':
+            $('#info-container').fadeIn();
+            $('#container').fadeIn();
+            break;
     }
 })
 
@@ -51,9 +61,11 @@ function updateHudPosition(Minimap) {
 	let width = Minimap.width;
 	let x = Minimap.left_x;
 	let y = Minimap.bottom_y;
+    let right = (Minimap.right_x * $(window).width() + 12)
 
 	let xCalc = (x * $(window).width());
-	let widthCalc = width * $(window).width()+ 2;
-	let yCalc = (y * $(window).height()) - 25;
+	let widthCalc = width * $(window).width() + 2;
+	let yCalc = (y * $(window).height()) - 40;
+    $('#info-container').css('left', right + 'px')
 	$('#container').css('left', xCalc + 'px').css('top', yCalc + 'px').css('width', widthCalc + 'px')
 }

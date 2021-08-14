@@ -8,12 +8,12 @@ description 'Custom hud created for vola'
 
 lua54 'yes'
 
-client_script 'client/hud_cl.lua'
-
-server_scripts {
-	"@vrp/lib/utils.lua",
-	'server/hud_sv.lua'
+client_scripts {
+	'config.lua',
+	'client/hud_cl.lua'
 }
+
+--server_script 'server/hud_sv.lua'
 
 ui_page 'html/ui.html'
 

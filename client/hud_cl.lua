@@ -22,13 +22,6 @@ CreateThread(function()
 end)
 
 CreateThread(function()
-	while true do
-		TriggerServerEvent('ev:getServerInfo')
-		Wait(2000)
-	end
-end)
-
-CreateThread(function()
 	while true do 
         local resX, resY = GetActiveScreenResolution()
         if screenRes.x == nil or screenRes.x ~= resX or screenRes.y == nil or screenRes.y ~= resY then 
@@ -41,6 +34,14 @@ CreateThread(function()
 	end
 end)
 
+CreateThread(function()
+    while true do
+        TriggerServerEvent('ev:getServerInfo')
+        Wait(2000)
+    end
+end)
+
+-- Functions
 function GetMinimapAnchor()
     local safezone = GetSafeZoneSize()
     local safezone_x = 1.0 / 20.0
@@ -71,4 +72,17 @@ RegisterNetEvent('ev:setInfo', function(info)
 		money = info.money,
 		bank = info.bankMoney
 	})
+end)
+
+-- Commands
+RegisterCommand(Config.showCommand, function()
+    SendNUIMessage({
+        action = 'show'
+    })
+end)
+
+RegisterCommand(Config.hideCommand, function()
+    SendNUIMessage({
+        action = 'hide'
+    })
 end)
